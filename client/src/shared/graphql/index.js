@@ -1,5 +1,57 @@
 import gql from 'graphql-tag';
 
+// Clients
+
+export const CLIENTS_LIST_QUERY = gql`
+    query ClientsList {
+        clientsList {
+            items {
+                firstName,
+                lastName,
+                email,
+                phone,
+                birthday
+            }
+        }
+    }
+`;
+
+// Products
+
+export const PRODUCTS_LIST_QUERY =  gql`
+    query ProductsList {
+        productsList {
+            items {
+                name,
+                description,
+                price,
+                picture {
+                    downloadUrl,
+                    filename
+                }
+            }
+        }
+    }
+`;
+
+// Orders
+
+export const ORDERS_LIST_QUERY = gql`
+    query OrdersList {
+        ordersList {
+            items {
+                client {
+                  lastName  
+                }
+                address,
+                deliveryDt,
+                comment,
+                status
+            }
+        }
+    }
+`;
+
 export const BROKER_CREATE_MUTATION = gql`
   mutation BrokerCreate($data: BrokerCreateInput!) {
     brokerCreate(data: $data) {
