@@ -30,10 +30,10 @@ let ProductsTable = ({ Products }) => (
                             />
                         </Table.BodyCell>
                         <Table.BodyCell>
-                            { R.pathOr('Unititled', ['name'], product) }
+                            { R.pathOr('Product name', ['name'], product) }
                         </Table.BodyCell>
                         <Table.BodyCell>
-                            { R.pathOr('Unititled', ['description'], product) }
+                            { R.pathOr('Product description', ['description'], product) }
                         </Table.BodyCell>
                         <Table.BodyCell>
                             { R.pathOr('Price', ['price'], product) }

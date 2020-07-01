@@ -6,7 +6,7 @@ import { Grid, Breadcrumbs as BoostBreadcrumbs, Link } from '@8base/boost';
 
 const BREADCRUMBS_ROUTES = [
   {
-    path: '/brokers',
+    path: '/clients',
     component: () => 'Brokers',
     matchOptions: { exact: true },
   },

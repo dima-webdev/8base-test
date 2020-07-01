@@ -17,7 +17,12 @@ let OrdersTable = ({ Orders }) => (
             <Table.HeaderCell />
         </Table.Header>
 
-        <Table.Body data={ R.pathOr([], ['ordersList', 'items'], Orders) } loading={Orders.length}>
+        <Table.Body
+            data={ R.pathOr([], ['ordersList', 'items'], Orders) }
+            loading={Orders.length}
+            action="Create order"
+            onActionClick={() => alert('Create order')}
+        >
             {
                 (Order) => (
                     <Table.BodyRow columns="repeat(5, 1fr) 60px" key={ Order.id }>
